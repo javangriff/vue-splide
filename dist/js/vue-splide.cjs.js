@@ -2740,10 +2740,21 @@ function _sfc_render$1(_ctx, _cache, $props, $setup, $data, $options) {
     default: vue.withCtx(() => [
       _ctx.hasTrack ? (vue.openBlock(), vue.createBlock(_component_SplideTrack, { key: 0 }, {
         default: vue.withCtx(() => [
-          vue.renderSlot(_ctx.$slots, "default")
+          vue.renderSlot(_ctx.$slots, "default", {
+            index: _ctx.index,
+            length: _ctx.length,
+            go: _ctx.go,
+            sync: _ctx.sync
+          })
         ]),
         _: 3
-      })) : vue.renderSlot(_ctx.$slots, "default", { key: 1 })
+      })) : vue.renderSlot(_ctx.$slots, "default", {
+        key: 1,
+        index: _ctx.index,
+        length: _ctx.length,
+        go: _ctx.go,
+        sync: _ctx.sync
+      })
     ]),
     _: 3
   }, 512);

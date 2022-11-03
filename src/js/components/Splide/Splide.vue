@@ -1,10 +1,10 @@
 <template>
   <component :is="tag" class="splide" ref="root">
     <SplideTrack v-if="hasTrack">
-      <slot></slot>
+      <slot :index="index" :length="length" :go="go" :sync="sync"></slot>
     </SplideTrack>
 
-    <slot v-else></slot>
+    <slot v-else :index="index" :length="length" :go="go" :sync="sync"></slot>
   </component>
 </template>
 
